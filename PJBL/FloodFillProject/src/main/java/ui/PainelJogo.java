@@ -58,6 +58,7 @@ public class PainelJogo extends JPanel {
                 floodFill.executarComFila(tabuleiro, x, y, cor, aoMudarPixel);
 
             repaint();
+            tabuleiro.salvarImagemFinal();
         });
 
         thread.start();

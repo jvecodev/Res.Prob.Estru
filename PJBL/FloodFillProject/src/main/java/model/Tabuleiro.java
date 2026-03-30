@@ -14,7 +14,7 @@ public class Tabuleiro {
     private int largura;
     private int altura;
     private int frameCount = 0;
-    private String pastaFrames = "resources/frames/";
+    private String pastaFrames = "PJBL/FloodFillProject/resources/frames/";
 
 
 
@@ -23,7 +23,8 @@ public class Tabuleiro {
         this.altura  = altura;
         this.imagem  = gerarImagem(largura, altura);
         new File(pastaFrames).mkdirs();
-        // new File("resources/output/").mkdirs();
+        new File("resources/output/").mkdirs();
+        new File("resources/input/").mkdirs();
     }
 
 
@@ -125,7 +126,11 @@ public class Tabuleiro {
 
 
     public void salvarImagemInicial() {
-        salvarArquivo("resources/input/carro_original.png");
+        salvarArquivo("PJBL/FloodFillProject/resources/input/carro_original.png");
+    }
+
+    public void salvarImagemFinal() {
+        salvarArquivo("PJBL/FloodFillProject/resources/output/carro_preenchido.png");
     }
 
     public void salvarFrame() {
